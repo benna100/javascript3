@@ -7,7 +7,9 @@ fetch('https://www.reddit.com/r/ProgrammerHumor.json')
 
         console.log(children);
         
-        const longWordedPosts = children.filter(post => post.data.title.split(' ').length > 6);
+        // functional programming
+
+        const longWordedPosts = children.filter(post => post.data.title.includes('?'));
         console.log(longWordedPosts.map(post => post.data.title));
         
 
@@ -147,3 +149,4 @@ bringMeSomePizza
     .then((data) => {
         // console.log(`${data} has arrived`);
     });
+    */
